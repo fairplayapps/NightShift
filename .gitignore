@@ -1,0 +1,48 @@
+# User config (use config.example.json as template)
+config.json
+
+# Logs
+*.log
+logs/*.log
+autonomous_sessions.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# User-specific config backups
+config.json.bak
+config.json.backup
+
+# PowerShell module cache
+*.psm1.cache
+
+# AI tool artifacts
+.aider/
+.aider.*
+
+# Test artifacts
+tests/.git/
+tests/PHASE*.md
+tests/QUALITY*.md
+tests/REVIEW*.md
+tests/GUI_TEST*.md
+
+# Session reports (user-generated)
+meta/session_reports/*/Session_*.md
+
+# Embedded git repos
+**/.git/

@@ -1,0 +1,39 @@
+﻿{
+  "_instructions": "=== NIGHTSHIFT CONFIG === Copy this file to config.json, then edit the values below",
+
+  "provider": "claude",
+  "project": "WebApp",
+  "maxSessions": 5,
+  "delaySeconds": 45,
+  "commitEveryNSessions": 3,
+  "defaultModel": "sonnet",
+  "stopTime": "",
+  "timezone": "local",
+
+  "_help": {
+    "provider": "AI provider to use: 'claude' (Claude Code CLI) or 'codex' (OpenAI Codex CLI)",
+    "project": "Pick a shortcut below OR write any custom command",
+    "maxSessions": "How many sessions to run before stopping. You can always Ctrl+C earlier.",
+    "delaySeconds": "Pause between sessions. Prevents rate limits + gives you time to Ctrl+C. 30-60 seconds recommended.",
+    "commitEveryNSessions": "Auto-commit & push every N sessions (e.g., 2 = on 2nd, 4th, 6th...). Set to 0 to disable.",
+    "defaultModel": "Default Claude model for all sessions: 'opus', 'sonnet', or 'haiku'. Leave empty for provider default.",
+    "stopTime": "Time to stop starting new sessions (24h format, e.g., '23:30' for 11:30 PM). Leave empty to disable.",
+    "timezone": "Timezone for stopTime: 'EST', 'PST', 'UTC', or 'local' (your system timezone)"
+  },
+
+  "projectShortcuts": {
+    "WebApp": "Autonomous agent. Working directory is PROJECT ROOT. Read ROADMAP.md and find the next unchecked task. Implement the task with actual working code. Run npm test to verify functionality. Update ROADMAP.md checkboxes to mark completed tasks. Create a session report in meta/session_reports/. NEVER create files outside the project directory.",
+
+    "Documentation": "Autonomous agent. Working directory is PROJECT ROOT. Read ROADMAP.md for documentation tasks. Write or update documentation files as specified. Ensure examples are accurate and links work. Update ROADMAP.md checkboxes to mark completed tasks. Create session report in meta/session_reports/.",
+
+    "Refactor": "Autonomous agent. Working directory is PROJECT ROOT. Read ROADMAP.md refactoring tasks. Refactor code while maintaining existing functionality. Run all tests before and after changes. Update ROADMAP.md checkboxes to mark completed tasks. Document changes in session report at meta/session_reports/.",
+
+    "Example-Advanced": "Autonomous agent for complex workflows. CRITICAL: Working directory is PROJECT ROOT. Read ROADMAP.md CURRENT STATUS and CURRENT TASK DETAILS. IMPLEMENT 1-2 tasks with actual code. QUALITY PROTOCOL: (1) START: Run tests - MUST PASS before any work, (2) DURING: Run tests after significant changes, (3) END: Run full test suite and verify build. Work in your project directory. Update ROADMAP.md checkboxes. Create report: meta/session_reports/Session_N.md. NEVER create files outside the project directory."
+  },
+
+  "_shortcutsHelp": "The prompts above are optimized for autonomous operation. You can add custom shortcuts or use setup.ps1 to generate one.",
+
+  "_customExamples": {
+    "quick-status": "Read ROADMAP.md and summarize current state. Read-only - no changes. Report next steps."
+  }
+}
